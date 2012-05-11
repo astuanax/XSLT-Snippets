@@ -3,6 +3,7 @@
 	XSLT native GUUID using a Lagged Fibanacci Generator (well ... some EXSLT involved ;-)
 	Created by Len Dierickx on 2012-05-08.
 	Copyright (c) 2012 __Astuanax__. All rights reserved.
+	But you can use it anywhere, anytime, anyplace
 -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:date="http://exslt.org/dates-and-times" xmlns:math="http://exslt.org/math" xmlns:exsl="http://exslt.org/common" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" extension-element-prefixes="date math">
     <xsl:output encoding="UTF-8" indent="yes" method="xml"/>
@@ -22,7 +23,6 @@
         
         <guuids>
           <guuid nr="2">F269D186-F258-183A-F234-F223353BF7A</guuid>
-        </guuids><guuids>
           <guuid nr="1">978D2D62-F269-F258-183A-F234DA60B64</guuid>
         </guuids>
         
@@ -32,9 +32,9 @@
         len ad astuanax dot com
         
         -->
-        
-        <xsl:call-template name="guuids"><xsl:with-param name="nr" select="2"/></xsl:call-template>
-        
+        <xsl:call-template name="guuids">
+            <xsl:with-param name="nr" select="2"/>
+        </xsl:call-template>
     </xsl:template>
     <!-- 
 	
@@ -227,19 +227,22 @@
         <xsl:param name="resultset"/>
         <xsl:choose>
             <xsl:when test="$nr = 0">
-                <xsl:value-of select="$resultset"/>
+                    <xsl:copy-of select="$resultset"/>
             </xsl:when>
             <xsl:otherwise>
+                <xsl:variable name="temp">
                 <guuids>
-                    <xsl:copy-of select="exsl:node-set($resultset)/guuids//guuid"/>
-                    <guuid nr="{$nr}">
-                        <xsl:call-template name="guuid">
-                            <xsl:with-param name="nr" select="$nr"/>
-                        </xsl:call-template>
-                    </guuid>
+                <xsl:copy-of select="exsl:node-set($resultset)//guuid"/>
+                <guuid nr="{$nr}">
+                    <xsl:call-template name="guuid">
+                        <xsl:with-param name="nr" select="$nr"/>
+                    </xsl:call-template>
+                </guuid>
                 </guuids>
+                </xsl:variable>
                 <xsl:call-template name="guuids">
                     <xsl:with-param name="nr" select="$nr - 1"/>
+                    <xsl:with-param name="resultset" select="$temp"/>
                 </xsl:call-template>
             </xsl:otherwise>
         </xsl:choose>
