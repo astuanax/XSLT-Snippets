@@ -8,3 +8,7 @@ generator and someother templates copy-pasted together from the internet.
 
 Need to work on this but, its a start
 
+Don't use this in production, unless time isn't an issue. 
+It takes quite some time to proess the initial seed values for the LFG
+
+
