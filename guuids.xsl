@@ -310,6 +310,6 @@
         <xsl:value-of select="'-'"/>
         <xsl:value-of select="substring($part4,1,4)"/>
         <xsl:value-of select="'-'"/>
-        <xsl:value-of select="substring($part5,1,12)"/>
+        <xsl:value-of select="substring($part5,1,13)"/>
     </xsl:template>
 </xsl:stylesheet>
