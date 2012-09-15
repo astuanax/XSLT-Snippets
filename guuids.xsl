@@ -22,7 +22,7 @@
         Returns a node set:
         
         <guuids>
-          <guuid nr="2">F269D186-F258-183A-F234-F223353BF7A</guuid>
+           <guuid nr="2">F269D186-F258-183A-F234-F223353BF7A</guuid>  
           <guuid nr="1">978D2D62-F269-F258-183A-F234DA60B64</guuid>
         </guuids>
         
@@ -144,6 +144,9 @@
             </xsl:when>
             <xsl:when test="$nextRand = $initJ">
                 <xsl:value-of select="'Error: nextRand cannot be equal to J'"/>
+            </xsl:when>
+            <xsl:when test="$initK &lt;= $initJ">
+                <xsl:value-of select="'Error: K needs to be bigger than J'"/>
             </xsl:when>
             <xsl:otherwise>
                 <xsl:variable name="x">
