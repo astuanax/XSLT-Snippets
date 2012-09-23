@@ -12,9 +12,9 @@ Don't use this in production, unless time isn't an issue.
 It takes quite some time to process the initial seed values for the LFG
 
 
-convert2courier.xsl
+convert2contour.xsl
 
-Convert exported document types to Courier templates.
+Convert exported document types to Contour templates.
 
 
 
