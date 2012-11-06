@@ -1,20 +1,19 @@
 XSLT-Snippets
 =============
 
-guuids.xsl
+- guuids.xsl
 
-An XSLT 1 native generator of 128 bit GUUID's using a Lagged Fibonaccipseudo-random number 
-generator and someother templates copy-pasted together from the internet.
+  An XSLT 1 native generator of 128 bit GUUID's using a Lagged Fibonaccipseudo-random number 
+  generator and someother templates copy-pasted together from the internet.
 
-Need to work on this but, its a start
+  Need to work on this but, its a start
 
-Don't use this in production, unless time isn't an issue. 
-It takes quite some time to process the initial seed values for the LFG
+  Don't use this in production, unless time isn't an issue. 
+  It takes quite some time to process the initial seed values for the LFG
 
+- convert2contour.xsl
 
-convert2contour.xsl
-
-Convert exported document types to Contour templates.
+  Convert exported document types to Contour templates.
 
 
 
