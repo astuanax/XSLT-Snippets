@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DataTypes>
+    <!--
+    Export all your DataTypes as the example below
+    -->
+	<DataType id="007" alias="alias" name="Name" typeName="Textstring">
+		<controlId text="Textstring">FC15C1E5-1D90-422A-AA52-4F7622C63BEA</controlId>
+		<PreValues>
+			<PreValue/>
+		</PreValues>
+	</DataType>
+</DataTypes>
