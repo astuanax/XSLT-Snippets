@@ -6,8 +6,8 @@
 	Copyright (c) 2012 __Len Dierickx__. All rights reserved.
 -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:date="http://exslt.org/dates-and-times" xmlns:math="http://exslt.org/math" xmlns:exsl="http://exslt.org/common" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" extension-element-prefixes="date math">
-	<xsl:import href="/Users/lendierickx/Dropbox-Len/Dropbox/Contour/guids.xsl"/>
-	<xsl:import href="/Users/lendierickx/Dropbox-Len/Dropbox/Contour/datatypes.xsl"/>
+	<xsl:import href="./guids.xsl"/>
+	<xsl:import href="./datatypes.xsl"/>
 	<xsl:output encoding="UTF-8" indent="yes" method="xml"/>
 	<xsl:variable name="formGUID">
 		<xsl:call-template name="guuids">
